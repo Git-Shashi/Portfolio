@@ -55,10 +55,11 @@ export default function App() {
 
   const skills = {
     'Programming Languages': ['Java', 'C/C++', 'JavaScript', 'Python', 'HTML5/CSS3'],
-    'Frontend': ['React.js', 'Next.js', 'Redux', 'Tailwind CSS', 'Bootstrap'],
+    'Frontend': ['React.js', 'Next.js', 'Redux', 'Tailwind CSS', 'Bootstrap', 'Responsive Design'],
     'Backend': ['Node.js', 'Express.js', 'RESTful APIs', 'WebSockets', 'JWT Auth'],
-    'Databases': ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'Prisma ORM', 'Kafka'],
-    'Tools & Cloud': ['Docker', 'Git/GitHub', 'AWS', 'Vercel', 'Firebase', 'Postman']
+    'Databases': ['MongoDB', 'Mongoose ODM', 'MySQL', 'Prisma ORM', 'Redis'],
+    'Tools & Cloud': ['Git/GitHub', 'VS Code', 'IntelliJ IDEA', 'Postman', 'Unix Shell'],
+    'Deployment': ['AWS', 'Vercel', 'Netlify', 'Render', 'Supabase', 'Firebase', 'Cloudinary']
   };
 
   const projects = [
@@ -77,7 +78,7 @@ export default function App() {
     },
     {
       title: 'IntelliChat - AI Assistant',
-      tech: 'React, Node.js, OpenAI API, MongoDB',
+      tech: 'React, Node.js, Gemini API, Groq AI API, MongoDB',
       date: 'Jan 2025',
       points: [
         '500+ daily conversations with 4.8/5 satisfaction rating',
@@ -90,7 +91,7 @@ export default function App() {
     },
     {
       title: 'Hired - Job Portal',
-      tech: 'React.js, Tailwind, Supabase, Clerk, PostgreSQL',
+      tech: 'React.js, Tailwind, Shadcn UI, Supabase, Clerk, PostgreSQL',
       date: 'Dec 2024',
       points: [
         '200+ active users with dual interfaces for seekers & recruiters',
@@ -183,7 +184,7 @@ export default function App() {
             </div>
             
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-1">
+            <div className="hidden md:flex space-x-1 items-center">
               {['Home', 'About', 'Skills', 'Experience', 'Projects', 'Achievements', 'Contact'].map((item) => (
                 <button
                   key={item}
@@ -197,6 +198,14 @@ export default function App() {
                   {item}
                 </button>
               ))}
+              <a
+                href="https://drive.google.com/file/d/your-resume-id/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300"
+              >
+                Download Resume
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -220,6 +229,15 @@ export default function App() {
                   {item}
                 </button>
               ))}
+              <a
+                href="https://drive.google.com/file/d/your-resume-id/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-left py-3 px-4 mt-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Download Resume
+              </a>
             </div>
           )}
         </div>
@@ -391,7 +409,7 @@ export default function App() {
               </li>
               <li className="flex items-start gap-3 hover:translate-x-2 transition-transform duration-200">
                 <span className="text-blue-600 mt-1">▸</span>
-                <span className="text-gray-700">Connected Riot Games and FACEIT APIs for live player statistics and tournament data, enabling real-time game insights and competitive tracking features</span>
+                <span className="text-gray-700">Collaborated on backend API routes and caching mechanisms to reduce data-fetch latency and ensure smooth real-time gameplay synchronization</span>
               </li>
               <li className="flex items-start gap-3 hover:translate-x-2 transition-transform duration-200">
                 <span className="text-blue-600 mt-1">▸</span>
@@ -508,10 +526,10 @@ export default function App() {
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { href: 'mailto:shashi847305@iiitmanipur.ac.in', icon: Mail, label: 'Email', value: 'shashi847305@iiitmanipur.ac.in', valueClass: 'text-sm' },
-              { href: 'tel:+917782899732', icon: Phone, label: 'Phone', value: '+91 7782899732', valueClass: '' },
-              { href: 'https://github.com/Git-Shashi', icon: Github, label: 'GitHub', value: '@Git-Shashi', valueClass: '' },
-              { href: 'https://www.linkedin.com/in/shashi-bhushan-kumar-796b53259', icon: Linkedin, label: 'LinkedIn', value: 'Connect', valueClass: '' }
+              { href: 'mailto:shashi847305@iiitmanipur.ac.in', icon: Mail, label: 'Email', value: 'shashi847305@...', valueClass: 'text-xs break-all' },
+              { href: 'tel:+917782899732', icon: Phone, label: 'Phone', value: '+91 7782899732', valueClass: 'text-sm' },
+              { href: 'https://github.com/Git-Shashi', icon: Github, label: 'GitHub', value: '@Git-Shashi', valueClass: 'text-sm' },
+              { href: 'https://www.linkedin.com/in/shashi-bhushan-kumar-796b53259', icon: Linkedin, label: 'LinkedIn', value: 'Connect', valueClass: 'text-sm' }
             ].map((contact, index) => (
               <a
                 key={index}
