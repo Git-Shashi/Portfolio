@@ -214,7 +214,7 @@ export default function App() {
                 </button>
               ))}
               <a
-                href="https://drive.google.com/file/d/your-resume-id/view"
+                href="https://drive.google.com/file/d/17iDq4SmDykwbLSV1Zq98yQSXiukVEaxF/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-2 px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300"
@@ -328,7 +328,7 @@ export default function App() {
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl hover:scale-105 transition-transform duration-500">
                   <img
-                    src="https://avatars.githubusercontent.com/u/Git-Shashi"
+                    src="https://res.cloudinary.com/drrkhp3f6/image/upload/v1760518051/arwyr0petxa2rh7kbz72.jpg"
                     alt="Shashi Kumar"
                     className="w-full h-full object-cover"
                     onError={(e) => {
