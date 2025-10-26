@@ -1,3 +1,18 @@
+/**
+ * App.jsx
+ *
+ * Main single-page portfolio application. This file contains the full page layout
+ * and sections (home, about, skills, experience, projects, achievements, contact).
+ *
+ * Navigation:
+ * - Sections are defined using <section id="...">. Use `scrollToSection(sectionId)` to navigate.
+ * - Active section detection is implemented in `handleScroll` (scroll event) and highlights the nav button.
+ * - IntersectionObserver is used to reveal content when sections enter the viewport.
+ *
+ * Editing tips:
+ * - To add a new page section, add a new <section id="your-id"> block and update the nav buttons.
+ * - For styles, Tailwind utility classes are used throughout. Inline animations are at the top of the render tree.
+ */
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Phone, ExternalLink, Code, Award, Briefcase, GraduationCap, Menu, X } from 'lucide-react';
 
